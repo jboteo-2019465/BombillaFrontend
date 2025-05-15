@@ -9,7 +9,7 @@ const LightSwitch: React.FC = () => {
   // Función que manda el estado del LED al backend
   const sendLedState = async (state: string) => {
     try {
-      await axios.post('http://localhost:3001/api/led', { state });
+      await axios.post('https://bombillabackend.onrender.com/api/led', { state });
       console.log(`Estado enviado: ${state}`);
     } catch (error) {
       console.error("Error al enviar el estado:", error);
